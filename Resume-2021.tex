@@ -1,0 +1,188 @@
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+%% AltaCV uses the fontawesome5 and packages.
+%% See http://texdoc.net/pkg/fontawesome5 for full list of symbols.
+
+% Change the page layout if you need to
+\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+
+% The paracol package lets you typeset columns of text in parallel
+\usepackage{paracol}
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{Roboto Slab}
+  \setsansfont{Lato}
+  \renewcommand{\familydefault}{\sfdefault}
+\else
+  % If using pdflatex:
+  \usepackage[rm]{roboto}
+  \usepackage[defaultsans]{lato}
+  % \usepackage{sourcesanspro}
+  \renewcommand{\familydefault}{\sfdefault}
+\fi
+
+% Change the colours if you want to
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\definecolor{DarkPastelRed}{HTML}{450808}
+\definecolor{PastelRed}{HTML}{8F0D0D}
+\definecolor{GoldenEarth}{HTML}{E7D192}
+\colorlet{name}{black}
+\colorlet{tagline}{PastelRed}
+\colorlet{heading}{DarkPastelRed}
+\colorlet{headingrule}{GoldenEarth}
+\colorlet{subheading}{PastelRed}
+\colorlet{accent}{PastelRed}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change some fonts, if necessary
+\renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+\renewcommand{\personalinfofont}{\footnotesize}
+\renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+\renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+%% Use (and optionally edit if necessary) this .cfg if you
+%% want to use an author-year reference style like APA(6)
+%% for your publication list
+\input{pubs-authoryear.cfg}
+
+%% Use (and optionally edit if necessary) this .cfg if you
+%% want an originally numerical reference style like IEEE
+%% for your publication list
+% \input{pubs-num.cfg}
+
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+
+\begin{document}
+\name{Branden Ward}
+\tagline{DevOps Engineer}
+%% You can add multiple photos on the left or right
+\photoR{2.8cm}{EngineerCastle}
+
+\personalinfo{  
+  \email{brandencward@gmail.com}
+  \phone{815-347-5264}
+  \location{Genoa City, WI}
+  \linkedin{linkedin.com/in/branden-ward-bb668511a/}
+  \github{github.com/brandencward}
+}
+
+\makecvheader
+
+\columnratio{0.6}
+
+\begin{paracol}{2}
+\cvsection{Experience}
+
+\cvevent{DevOps Engineer}{Alegeus}{2020 -- Present}{Remote}
+\begin{itemize}
+\item .Net Framework Application Development
+\item System Stability Engineering, Monitoring, Reporting and Analysis
+\item CI/CD using release pipelines
+\item Automation Scripting and Development
+\item Managed  software version control system 
+\end{itemize}
+
+\divider
+
+\cvevent{Sustaining Engineer}{Alegeus}{2017 -- 2020}{Milwaukee, WI}
+\begin{itemize}
+\item Bug hunter for 6 SaaS Platforms
+\item Scripting
+\item Site Reliability Engineering
+\end{itemize}
+
+\divider
+
+\cvevent{Combat Engineer}{U.S. Army}{2007 -- 2012}{Bamberg, Germany}
+\begin{itemize}
+\item Held U.S. Government top secret clearance
+\item Supervised issuing procedures, maintenance, and was 100\% accountable for \$3 million of highly sensitive equipment- with zero losses over an 18-month period.
+\item Conducted Joint Operations and Training with Afghan, Jordanian and NATO personel. 
+\end{itemize}
+
+\medskip
+
+\cvsection{About Myself}
+
+I am a problem solver that enjoys the process of figuring out solutions. I have many hobbies and keep an open mind. I am always looking to learn something new and gain new skills. I am driven by technical challenges and strive to do things the right way. I am a firm believer of leaving things in better condition than when I found them. I’m looking for a position that can fulfill my drive to create new and innovative solutions for problems.
+
+\switchcolumn
+
+\cvsection{My Life Philosophy}
+
+\begin{quote}
+``You should always strive to leave things better than when you found them.''
+\end{quote}
+
+\divider
+
+\begin{quote}
+  ``You learn something every day if you pay attention. -- Ray LeBlond''
+  \end{quote}
+
+  \divider
+
+\begin{quote}
+  ``Life is growth. If we stop growing, technically and spiritually, we are as good as dead. -- Morihei Ueshiba''
+  \end{quote}  
+
+\cvsection{Fun Projects}
+
+\cvachievement{\faHeartbeat}{Pi-hole}{Network-wide Ad Blocking}
+
+\divider
+
+\cvachievement{\faHeartbeat}{Sense Hat}{Sense HAT is an add-on board for Raspberry Pi that has 6 different sensors and an 8×8 RGB LED matrix.}
+
+\cvsection{Strengths}
+
+\cvtag{Hard-Working}
+\cvtag{Attention to Detail}\\
+\cvtag{Driven}
+\cvtag{Thirst for Knowledge}
+\cvtag{Automator}
+\cvtag{Tech Enthusiast}
+\cvtag{Open Minded}
+
+\divider\smallskip
+
+\cvtag{.Net}
+\cvtag{T-SQL}
+\cvtag{Powershell}
+\cvtag{Python}
+\cvtag{Bash}
+\cvtag{VB Script}
+\cvtag{Octopus}
+\cvtag{Git}
+\cvtag{SCOM}
+\cvtag{AppVeyor}
+\cvtag{SonarQube}
+\cvtag{Docker}
+\cvtag{Azure}
+\cvtag{Postman}
+\cvtag{Splunk}
+
+\medskip
+
+\cvsection{Education}
+
+\cvevent{B.Sc. in Computer Science}{University of Wisconsin -Parkside}{2017}{}
+
+\divider
+
+\cvevent{A.Sc. in Computer Science}{College of Lake County}{2014}{}
+
+\end{paracol}
+
+\end{document}

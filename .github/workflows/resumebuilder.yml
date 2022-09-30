@@ -42,5 +42,3 @@ jobs:
           artifacts: BrandenCWard.pdf
           bodyFile: release.md
           token: ${{secrets.GITHUB_TOKEN}}
-        
-        

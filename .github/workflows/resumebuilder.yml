@@ -30,7 +30,7 @@ jobs:
           echo "Compiling document..."
           xelatex -shell-escape -ouptut-driver="xdvipdfmx -z 0" BrandenCWard.tex
       
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v3
         with:
           name: PDF
           path: BrandenCWard.pdf
